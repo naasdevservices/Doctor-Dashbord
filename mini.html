@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="B.png" height="40px" alt="">
+           <h5 style="color: #fff; ;"></h5>
+        </div> 
+        <nav>
+            <a href="mini.html" class="home"><img src="home.png" height="30px" alt=""></a>
+            <a href="../roufaida/cal.html"><img src="cal.png" height="35px" alt=""></a>
+            <a href="../login-web/appointment.html"><img src="patient.png" height="35px"  alt=""></a>
+            <a href="../login-web/parametre.html"><img src="para.png" height="35px" alt=""></a>
+            <div class="logout" ><a href="#" id="out"> <img src="logout.png" height="35px" alt=""> </a></div>
+        </nav>
+    </div>
+
+    <div class="main-content"> 
+        <h2>    Doctor Dashboard</h2>
+        <header>
+            <div>
+            <h1>Good Morning</h1> 
+            <h1><span>Dr.NaAsdev</span></h1>
+            <P>have  a  nice  day  at  work </P>
+            </div>
+            <div>
+                <img src="a (2).png" class="img" alt="">
+            </div>
+        </header>
+ <h3>Pined information for today</h3>
+ <div class="pined">
+    <div class="notes-container" id="notes-container"></div>
+    <div class="rectangle">
+        <button class="plus-btn" onclick="showModal()">+</button>
+        <p>add notes</p>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Add Note</h2>
+        <textarea id="note" placeholder="writh your note here"></textarea>
+       
+        <button onclick="submitNote()">Save</button>
+    </div>
+    
+</div>
+
+
+       
+    </div>
+    <div  class="profile">
+        <div class="container">
+            <!-- الدائرة الكبيرة -->
+            <div class="large-circle">
+                <img id="image" src="" alt="الصورة" class="image">
+                <!-- الدائرة الصغيرة مع علامة زائد -->
+               </div> <div class="small-circle" onclick="openFileDialog()">
+                    
+                
+            </div>
+           
+        </div>
+    
+        <input type="file" id="fileInput" style="display:none;" accept="image/*" onchange="loadImage(event)">
+        
+       
+        <div class="calendar-container">
+            <h1 id="today-date"></h1>
+            <div id="calendar" class="calendar"></div>
+        </div>
+     <div class="stat">
+        <img src="p1.jpg" height="220px" alt="">
+     </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
