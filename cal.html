@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Patients</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Liste des patients</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Rechercher..." oninput="searchTable()" />
+      <button id="addPatient" onclick="addPatient()">Ajouter un patient</button>
+    </div>
+    <table id="patientsTable">
+      <thead>
+        <tr>
+          <th>Nom & Prénom</th>
+          <th>Âge</th>
+          <th>Sexe</th>
+          <th>GS</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Wilaya</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exemple de données -->
+        <tr>
+          <td>Sellami Djelloul</td>
+          <td>32</td>
+          <td>Homme</td>
+          <td>O+</td>
+          <td>0665322695</td>
+          <td>sellami.djelloul@gmail.com</td>
+          <td>Mila</td>
+          <td>
+            <button class="edit-btn" onclick="editRow(this)">✏️</button>
+            <button class="delete-btn" onclick="deleteRow(this)">❌</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
